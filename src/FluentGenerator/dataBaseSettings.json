@@ -1,0 +1,3 @@
+{
+  "DbConnectionString": "server=.;database=Test;Trusted_connection = True;"
+}
