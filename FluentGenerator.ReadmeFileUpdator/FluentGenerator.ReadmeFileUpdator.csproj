@@ -15,8 +15,4 @@
     <ProjectReference Include="..\src\FluentGenerator\FluentGenerator.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Files\" />
-  </ItemGroup>
-
 </Project>

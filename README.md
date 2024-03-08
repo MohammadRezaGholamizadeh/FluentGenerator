@@ -1,5 +1,6 @@
 # Fluent Generator
 This Package Is For Auto Generating The Fixture And Infrastructure That We Need To Config And Use In TDD - BDD And All Test That We Need To Run On Sql-Server And Sql-Lite and Other Database. This Package Make All Sut And Data Infrastructure And DbContext For You In Test Drivern Design Flow. Enjoy It
+
 ![Logo](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/src/FluentGenerator/Logo.ico)
 
 ## Authors
@@ -11,6 +12,7 @@ I MohammadReza Gholamizadeh. I`m Dotnet Software Developer That Always Try To Ma
 [![Source Code](https://img.shields.io/badge/Source_Code-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh/FluentGenerator/tree/main)
 [![MohammadReza Gholamizadeh GitHub](https://img.shields.io/badge/MohammadReza_Gholamizadeh_GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh)
 [![Nuget](https://img.shields.io/badge/Nuget-4974a5?style=for-the-badge&logo=nuget&logoColor=white)](https://www.nuget.org/profiles/MohammadrezaGholamizadeh_Phoenix)
+[![Nuget](https://img.shields.io/badge/Nuget-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammadreza-gholamizadeh-b94b1521b/)
 
 ## Licenses
 * [Apache-2.0 license](https://github.com/MohammadRezaGholamizadeh/FluentGenerator/blob/main/LICENSE)
@@ -40,22 +42,53 @@ Implement The Abstract Methods With Empty Body. These Methods Are :
 ![Step1](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic1.png)
 
 ## # Step 3
-In [ServicesConfiguration] Method You Must Register All Your Service And Repository And ThirdPartyService That You Use In Your App.All Class That You Referenced In Each Class Must Be Registered Here.
+In [ServicesConfiguration] Method You Must Register All Your Service And Repository 
+And ThirdPartyService That You Use In Your App.All Class That You Referenced In Each Class 
+Must Be Registered Here.When You Are Registering Services And All Part Of Application you Must Use These Method 
+To Pass DbContext Or Mocked Object To Them To Use.This Methods Is [.WithDbContext(context as DbContext)] And [.WithConstructorParameters(mockedServiceParameters)]
 
 
 ## # Step 4
-In [SqlLiteConfiguration] Method You Must Config Your SqlLite DbContext To Inject To All Repository And Services That You Want To Test With Unit Tetsting Process.
+In [SqlLiteConfiguration] Method You Must Config Your SqlLite DbContext To Inject To All Repository 
+And Services That You Want To Test With Unit Tetsting Process.
 
 
 ## # Step 5
-In [SqlServerConfiguration] Method You Must Config Your SqlServer DbContext To Inject To All Repository And Services That You Want To Test With Integration Or Spec Flow Tetsting Process And You Want Run On SqlServer DataBase.
+In [SqlServerConfiguration] Method You Must Config Your SqlServer DbContext 
+To Inject To All Repository And Services That You Want To Test With Integration Or Spec Flow Tetsting 
+Process And You Want Run On SqlServer DataBase.
 
 
 ## # Step 6
-Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, You Must Do It Like Pictures
+Create A Generic Class And Inherit From Generic Class That You Created In Step 1.
+Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, 
+You Must Do It Like Pictures And All You Need To Add In It.
 
 
 ![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic2.png)
+
+![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic3.png)
+
+## # Step 7
+Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. 
+Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, You Must Do It Like Pictures
+If You Want To Use SqlLite Configuration that You Configured In Previous Step You Must Use DataBaseType.SqlLiteDataBase In CreateService Method
+And If You Want To Use SqlServer Configuration that You Configured In Previous Step You Must Use DataBaseType.SqlServerDataBase Instead.
+
+
+## # Step 8
+Go To Your Test Class And Inherit From Generic Class That Create And Configured Your SUT And DbContext In It 
+And In Generic Parameter You Must Use Your Sut Interface That You Want To Test Like Pictures :
+
+
+![Step8](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic4.png)
+
+## Step 9
+Now You Must Add A Json File Whit Exactly Name [dataBaseSettings.json] that Contains Connection String In Static Format Exactly Like Pictures 
+And Most Registered In .cjproj File: This Is Your Test Data Base Connection String.
+
+
+![Step9](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic5.png)
 
 # Class And Method Implementation
 ## Type : AutoServiceConfiguration
