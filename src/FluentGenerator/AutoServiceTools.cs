@@ -1,11 +1,13 @@
 ﻿using Autofac;
 using Autofac.Builder;
+using DotNetReportsEngine.ReadmeGeneration.Details;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 
 namespace FluentGenerator
 {
+    [RenderInReadmeFile]
     public static class AutoServiceTools
     {
         /* Developer : MohammadReza Gholamizadeh */

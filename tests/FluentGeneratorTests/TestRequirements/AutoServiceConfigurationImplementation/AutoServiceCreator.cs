@@ -17,7 +17,7 @@ namespace FluentGeneratorTests.TestRequirements.AutoServiceConfigurationImplemen
             container.RegisterType<TestService>()
                 .As<ServiceInterface>()
                 .WithConstructorParameters(mockedServiceParameters)
-                .WithDbContext(context as EFDataContext)
+                .WithDbContext((context as EFDataContext)!)
                 .SingleInstance();
         }
 

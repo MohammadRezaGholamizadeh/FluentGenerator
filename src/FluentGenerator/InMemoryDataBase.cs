@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using DotNetReportsEngine.ReadmeGeneration.Details;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Reflection;
 
 namespace FluentGenerator
 {
+    [RenderInReadmeFile]
     public class InMemoryDataBase
     {
         /// <summary>
@@ -19,7 +21,7 @@ namespace FluentGenerator
         /// <returns>TDbContext As Your Specific DbContext </returns>
         public TDbContext CreateInMemoryDataContext<TDbContext>(
                 SqliteConnection sqliteConnection,
-                Dictionary<Type, object> dbContextConstructorParameterDetails,
+                Dictionary<Type, object>? dbContextConstructorParameterDetails,
                 params object[] entities)
                 where TDbContext : DbContext
         {

@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using DotNetReportsEngine.ReadmeGeneration.Details;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +10,7 @@ using System.Transactions;
 
 namespace FluentGenerator
 {
+    [RenderInReadmeFile]
     /* Developer : MohammadReza Gholamizadeh [Phoenix]*/
     public abstract class AutoServiceConfiguration : IDisposable
     {
@@ -58,7 +60,7 @@ namespace FluentGenerator
         /// <returns>DbContext As Specific Type</returns>
         public T GetContext<T>() where T : DbContext
         {
-            return Context as T;
+            return (Context as T)!;
         }
         protected AutoServiceConfiguration()
         {
@@ -74,7 +76,7 @@ namespace FluentGenerator
         /// <typeparam name="T">Specific Service Type That You Want To Created Instance With</typeparam>
         /// <param name="dataBase">DataBase Type That You Want To Use For Services</param>
         /// <returns> T as Specific Service That Created</returns>
-        public T? CreateService<T>(
+        public T CreateService<T>(
                  DataBaseType dataBase = DataBaseType.SqlLiteDataBase)
                  where T : class
         {
@@ -94,7 +96,7 @@ namespace FluentGenerator
             ServicesConfiguration(_serviceContainer, MockedObjects, Context);
             return _serviceContainer.Build()
                                     .BeginLifetimeScope()
-                                    .ResolveOptional<T>();
+                                    .ResolveOptional<T>()!;
         }
 
         /// <summary>
@@ -103,23 +105,23 @@ namespace FluentGenerator
         /// <param name="jsonFileName"></param>
         /// <param name="connectionStringName"></param>
         /// <returns>Connection String</returns>
-        public string? GetConnectionString(
+        public string GetConnectionString(
             string jsonFileName = "dataBaseSettings.json",
             string connectionStringName = "DbConnectionString")
         {
             var settings = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile(
-                    jsonFileName,
-                    optional: true,
-                    reloadOnChange: false)
-                .AddEnvironmentVariables()
-                .AddCommandLine(Environment.GetCommandLineArgs())
-                .Build();
+                               .SetBasePath(Directory.GetCurrentDirectory())
+                               .AddJsonFile(
+                                   jsonFileName,
+                                   optional: true,
+                                   reloadOnChange: false)
+                               .AddEnvironmentVariables()
+                               .AddCommandLine(Environment.GetCommandLineArgs())
+                               .Build();
 
             DbConnectionString =
                 settings.GetSection(connectionStringName).Get<string>();
-            return DbConnectionString;
+            return DbConnectionString!;
         }
 
         protected virtual void Dispose(bool disposing)
