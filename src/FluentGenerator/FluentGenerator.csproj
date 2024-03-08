@@ -3,7 +3,27 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+    <DebugType>embedded</DebugType>
+    <Version>2024.1.0</Version>
+    <Company>FluentGenerator - MohammadReza Gholamizadeh [Phoenix] </Company>
+    <Authors>FluentGenerator - MohammadReza Gholamizadeh [Phoenix] </Authors>
+    <Description>This Package Is For Auto Generating The Fixture And Infrastructure That We Need To Config And Use In TDD - BDD And All Test That We Need To Run On Sql-Server And Sql-Lite and Other Database. This Package Make All Sut And Data Infrastructure And DbContext For You In Test Drivern Design Flow This Is The Best Tools For Test Driven Design [TDD] And Behavior Driven Design [BDD] And Spec Flow Test [SpecFlow - ATDD] . Enjoy It</Description>
+    <Copyright>Apache-2.0 license</Copyright>
+    <PackageProjectUrl>https://github.com/MohammadRezaGholamizadeh/FluentGenerator</PackageProjectUrl>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MohammadRezaGholamizadeh/FluentGenerator</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="C:\Users\Phoenix\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\LICENSE" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="LICENSE" />
+    <None Remove="Logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="8.0.0" />
@@ -25,6 +45,29 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </EmbeddedResource>
+    <Content Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
