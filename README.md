@@ -25,22 +25,37 @@ NuGet\Install-Package FluentGenerator -Version 2024.1.0
 ```
 
 ## Get Start To Use It
-### Step 1 : 
-    Create A Generic Class And Inherit From AutoServiceConfiguration Abstract Class
-### Step 2 : 
-    Implement The Abstract Methods With Empty Body. These Methods Are : 
-    * void ServicesConfiguration(ContainerBuilder container, Dictionary<Type, object> mockedServiceParameters, DbContext context)
-    * DbContext SqlLiteConfiguration(SqliteConnection sqliteConnection)
-    * DbContext SqlServerConfiguration()
-### Step 3 :
-    In [ServicesConfiguration] Method You Must Register All Your Service And Repository And ThirdPartyService That You Use In Your App.All Class That You Referenced In Each Class Must Be Registered Here.
-### Step 4 : 
-    In [SqlLiteConfiguration] Method You Must Config Your SqlLite DbContext To Inject To All Repository And Services That You Want To Test With Unit Tetsting Process.
-### Step 5 :
-    In [SqlServerConfiguration] Method You Must Config Your SqlServer DbContext To Inject To All Repository And Services That You Want To Test With Integration Or Spec Flow Tetsting Process And You Want Run On SqlServer DataBase.
-### Step 6 : 
-    Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, You Must Do It Like Pictures
 
+
+## # Step 1
+Create A Generic Class And Inherit From AutoServiceConfiguration Abstract Class
+
+## # Step 2
+Implement The Abstract Methods With Empty Body. These Methods Are : 
+* void ServicesConfiguration(ContainerBuilder container, Dictionary<Type, object> mockedServiceParameters, DbContext context)
+* DbContext SqlLiteConfiguration(SqliteConnection sqliteConnection)
+* DbContext SqlServerConfiguration()
+
+
+![Step1](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic1.png)
+
+## # Step 3
+In [ServicesConfiguration] Method You Must Register All Your Service And Repository And ThirdPartyService That You Use In Your App.All Class That You Referenced In Each Class Must Be Registered Here.
+
+
+## # Step 4
+In [SqlLiteConfiguration] Method You Must Config Your SqlLite DbContext To Inject To All Repository And Services That You Want To Test With Unit Tetsting Process.
+
+
+## # Step 5
+In [SqlServerConfiguration] Method You Must Config Your SqlServer DbContext To Inject To All Repository And Services That You Want To Test With Integration Or Spec Flow Tetsting Process And You Want Run On SqlServer DataBase.
+
+
+## # Step 6
+Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, You Must Do It Like Pictures
+
+
+![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic2.png)
 
 # Class And Method Implementation
 ## Type : AutoServiceConfiguration

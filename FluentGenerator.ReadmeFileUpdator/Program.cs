@@ -45,23 +45,18 @@ var generatedReadme =
             Description = "You Must Add FluentGenerator Package To Your Project That You Wrote All Your Service Test In It By These Command :"
         })
         .AddCustomBashCommand("Package Manager", @"NuGet\Install-Package FluentGenerator -Version 2024.1.0")
-        .AddCustomText("Get Start To Use It",
-                       "### Step 1 : " + Environment.NewLine +
-                       "    Create A Generic Class And Inherit From AutoServiceConfiguration Abstract Class" + Environment.NewLine +
-                       "### Step 2 : " + Environment.NewLine +
-                       "    Implement The Abstract Methods With Empty Body. These Methods Are : " + Environment.NewLine +
-                       "    * void ServicesConfiguration(ContainerBuilder container, Dictionary<Type, object> mockedServiceParameters, DbContext context)" + Environment.NewLine +
-                       "    * DbContext SqlLiteConfiguration(SqliteConnection sqliteConnection)" + Environment.NewLine +
-                       "    * DbContext SqlServerConfiguration()" + Environment.NewLine +
-                       "### Step 3 :" + Environment.NewLine +
-                       "    In [ServicesConfiguration] Method You Must Register All Your Service And Repository And ThirdPartyService That You Use In Your App.All Class That You Referenced In Each Class Must Be Registered Here." + Environment.NewLine +
-                       "### Step 4 : " + Environment.NewLine +
-                       "    In [SqlLiteConfiguration] Method You Must Config Your SqlLite DbContext To Inject To All Repository And Services That You Want To Test With Unit Tetsting Process." + Environment.NewLine +
-                       "### Step 5 :" + Environment.NewLine +
-                       "    In [SqlServerConfiguration] Method You Must Config Your SqlServer DbContext To Inject To All Repository And Services That You Want To Test With Integration Or Spec Flow Tetsting Process And You Want Run On SqlServer DataBase." + Environment.NewLine +
-                       "### Step 6 : " + Environment.NewLine +
-                       "    Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, You Must Do It Like Pictures" + Environment.NewLine +
-                       "")
+        .AddCustomText("Get Start To Use It", "")
+        .AddCustomText("# Step 1", "Create A Generic Class And Inherit From AutoServiceConfiguration Abstract Class")
+        .AddCustomText("# Step 2", "Implement The Abstract Methods With Empty Body. These Methods Are : " + Environment.NewLine +
+                                   "* void ServicesConfiguration(ContainerBuilder container, Dictionary<Type, object> mockedServiceParameters, DbContext context)" + Environment.NewLine +
+                                   "* DbContext SqlLiteConfiguration(SqliteConnection sqliteConnection)" + Environment.NewLine +
+                                   "* DbContext SqlServerConfiguration()" + Environment.NewLine)
+        .SetLogo("Step1", "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic1.png")
+        .AddCustomText("# Step 3", "In [ServicesConfiguration] Method You Must Register All Your Service And Repository And ThirdPartyService That You Use In Your App.All Class That You Referenced In Each Class Must Be Registered Here." + Environment.NewLine)
+        .AddCustomText("# Step 4", "In [SqlLiteConfiguration] Method You Must Config Your SqlLite DbContext To Inject To All Repository And Services That You Want To Test With Unit Tetsting Process." + Environment.NewLine)
+        .AddCustomText("# Step 5", "In [SqlServerConfiguration] Method You Must Config Your SqlServer DbContext To Inject To All Repository And Services That You Want To Test With Integration Or Spec Flow Tetsting Process And You Want Run On SqlServer DataBase." + Environment.NewLine)
+        .AddCustomText("# Step 6", "Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. Then Implement Sut And DataContext That You Want To Use In Generic Format Like Prictures, You Must Do It Like Pictures" + Environment.NewLine)
+        .SetLogo("Step6", "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic2.png")
         .RenderAllAssembliesToText()
         .GetText();
 
