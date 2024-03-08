@@ -5,7 +5,8 @@ using FluentGenerator;
 var generatedReadme =
     new ReadmeGenerator()
         .AddAssembly(typeof(AutoServiceTools).Assembly)
-        .SetProjectDetail("Fluent Generator", "This Package Is For Auto Generating The Fixture And Infrastructure That We Need To Config And Use In TDD - BDD And All Test That We Need To Run On Sql-Server And Sql-Lite and Other Database. This Package Make All Sut And Data Infrastructure And DbContext For You In Test Drivern Design Flow. Enjoy It" + Environment.NewLine)
+        .SetProjectDetail("Fluent Generator", "This Package Is For Auto Generating The Fixture And Infrastructure That We Need To Config And Use In TDD - BDD And All Test That We Need To Run On Sql-Server And Sql-Lite and Other Database. This Package Make All Sut And Data Infrastructure And DbContext For You In Test Drivern Design Flow" + Environment.NewLine +
+        "This Is The Best Tools For Test Driven Design [TDD] And Behavior Driven Design [BDD] And Spec Flow Test [SpecFlow - ATDD] . Enjoy It" + Environment.NewLine)
         .SetLogo(new Logo()
         {
             Title = "Logo",
@@ -26,6 +27,12 @@ var generatedReadme =
                 LogoType = LogoLinkType.Github,
                 Title = "MohammadReza Gholamizadeh GitHub",
                 Link = "https://github.com/MohammadRezaGholamizadeh",
+            },
+            new GitHubLink()
+            {
+                LogoType = LogoLinkType.CustomLink,
+                Title = "Readme File",
+                Link = "https://github.com/MohammadRezaGholamizadeh/FluentGenerator/blob/main/README.md",
             },
             new GitHubLink()
             {
