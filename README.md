@@ -12,7 +12,7 @@ I MohammadReza Gholamizadeh. I`m Dotnet Software Developer That Always Try To Ma
 [![Source Code](https://img.shields.io/badge/Source_Code-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh/FluentGenerator/tree/main)
 [![MohammadReza Gholamizadeh GitHub](https://img.shields.io/badge/MohammadReza_Gholamizadeh_GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh)
 [![Nuget](https://img.shields.io/badge/Nuget-4974a5?style=for-the-badge&logo=nuget&logoColor=white)](https://www.nuget.org/profiles/MohammadrezaGholamizadeh_Phoenix)
-[![Nuget](https://img.shields.io/badge/Nuget-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammadreza-gholamizadeh-b94b1521b/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammadreza-gholamizadeh-b94b1521b/)
 
 ## Licenses
 * [Apache-2.0 license](https://github.com/MohammadRezaGholamizadeh/FluentGenerator/blob/main/LICENSE)
@@ -39,7 +39,7 @@ Implement The Abstract Methods With Empty Body. These Methods Are :
 * DbContext SqlServerConfiguration()
 
 
-![Step1](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic1.png)
+![Step1](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/AutoServiceCreator.png)
 
 ## # Step 3
 In [ServicesConfiguration] Method You Must Register All Your Service And Repository 
@@ -65,9 +65,9 @@ Then Implement Sut And DataContext That You Want To Use In Generic Format Like P
 You Must Do It Like Pictures And All You Need To Add In It.
 
 
-![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic2.png)
+![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/UnitSut.png)
 
-![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic3.png)
+![Step6](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/IntegrationSut.png)
 
 ## # Step 7
 Create A Generic Class And Inherit From Genericc Class That You Created In Step 1. 
@@ -81,9 +81,17 @@ Go To Your Test Class And Inherit From Generic Class That Create And Configured 
 And In Generic Parameter You Must Use Your Sut Interface That You Want To Test Like Pictures :
 
 
-![Step8](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/Pic4.png)
+![Step8](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/UnitSutInTest.png)
 
-## Step 9
+![Step8](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/IntegrtionSutInTest.png)
+
+## # Step 9
+If You Need To Use Mock Objects In Your Sut So You Must Do Like This Picture : 
+
+
+![Step9](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/FluentGenerator.ReadmeFileUpdator/Files/WhenWeWantToUseMock.png)
+
+## Step 10
 Now You Must Add A Json File Whit Exactly Name [dataBaseSettings.json] that Contains Connection String In Static Format Exactly Like Pictures 
 And Most Registered In .cjproj File: This Is Your Test Data Base Connection String.
 
