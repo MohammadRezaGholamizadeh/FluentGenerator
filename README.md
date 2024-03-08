@@ -190,6 +190,7 @@ Create A List Of Mocked Parameters To Fill.
 | -------- | ------- | ------------------------- |
 | `context` | `DbContext` | ** **Required.**                      |
 | `entity` | `Object` | ** **Required.**                      |
+
 Save An Entity To DataBase That You Want.
 
 ## Type : InMemoryDataBase

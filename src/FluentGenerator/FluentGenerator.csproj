@@ -6,6 +6,7 @@
     <ApplicationIcon>Logo.ico</ApplicationIcon>
     <DebugType>embedded</DebugType>
     <Version>2024.1.0</Version>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <Company>FluentGenerator - MohammadReza Gholamizadeh [Phoenix] </Company>
     <Authors>FluentGenerator - MohammadReza Gholamizadeh [Phoenix] </Authors>
     <Description>This Package Is For Auto Generating The Fixture And Infrastructure That We Need To Config And Use In TDD - BDD And All Test That We Need To Run On Sql-Server And Sql-Lite and Other Database. This Package Make All Sut And Data Infrastructure And DbContext For You In Test Drivern Design Flow This Is The Best Tools For Test Driven Design [TDD] And Behavior Driven Design [BDD] And Spec Flow Test [SpecFlow - ATDD] . Enjoy It</Description>
